@@ -34,13 +34,7 @@ namespace basics.Controllers;
             }
       public IActionResult List()
         {
-            var kurslar = new List<Course>
-            {
-                new Course() { Id = 1, Title = "Plaj Resmi", Description = "Günbatımında Plaj Resmi", ImageUrl = "1.jpg" },
-                new Course() { Id = 2, Title = "Göl Resmi", Description = "Bir gölün Fotoğrafı", ImageUrl = "2.jpg" },
-                new Course() { Id = 3, Title = "Yıldızlı Bir Gece", Description = "Da Vinchi'nin tablosu", ImageUrl = "3.jpg" },
-            };
-            return View("CourseList", kurslar);
+            return View("CourseList",Repository.Courses);
         }
 
         }
