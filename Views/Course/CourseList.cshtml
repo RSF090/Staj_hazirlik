@@ -2,5 +2,6 @@
 
 @foreach (var Course in Model)
 {
- @await Html.PartialAsync("_Course", Course)
+    @if(Course.isActive){
+ @await Html.PartialAsync("_Course", Course)}
 }

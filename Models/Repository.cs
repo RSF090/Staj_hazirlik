@@ -11,9 +11,27 @@ namespace basics.Models
         {
             _courses = new List<Course>()
             {
-                new Course() { Id = 1, Title = "Plaj Resmi", Description = "Günbatımında Plaj Resmi", ImageUrl = "1.jpg" },
-                new Course() { Id = 2, Title = "Göl Resmi", Description = "Bir gölün Fotoğrafı", ImageUrl = "2.jpg" },
-                new Course() { Id = 3, Title = "Yıldızlı Bir Gece", Description = "Da Vinci'nin tablosu", ImageUrl = "3.jpg" }
+                new Course() { 
+                    Id = 1, Title = "Plaj Resmi", 
+                    Description = "Günbatımında Plaj Resmi", 
+                    ImageUrl = "1.jpg" ,
+                    Tags = new string[] { "Plaj", "Günbatımı" },
+                    isActive = true,
+                    isHome = true,},
+                new Course() { 
+                    Id = 2, Title = "Göl Resmi",
+                     Description = "Bir gölün Fotoğrafı",
+                      ImageUrl = "2.jpg",
+                      Tags = new string[] { "Göl", "Doğa" },
+                        isActive = false,
+                        isHome = true,},
+                new Course() { 
+                    Id = 3, Title = "Yıldızlı Bir Gece",
+                     Description = "Da Vinci'nin tablosu",
+                      ImageUrl = "3.jpg",
+                      Tags = new string[] { "Yıldızlar", "Gece" },
+                    isActive = true,
+                    isHome = false,},
             };
         }
 
