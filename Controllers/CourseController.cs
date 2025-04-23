@@ -6,30 +6,15 @@ namespace basics.Controllers;
 
     public class CourseController : Controller
     {
-            public IActionResult Index()
+             public IActionResult Details(int? id)
             {
-        var kurs = new Course
-        {
-            Id = 1,
-            Title = "Resim",
-            Description = "Resim Çizimi",
-
-        };
-        
-
-        return View(kurs);
-            }
-             public IActionResult Details()
-            {
-        var kurs = new Course
-        {
-            Id = 1,
-            Title = "Resim",
-            Description = "Güzel bir plaj resim",
-            ImageUrl = "1.jpg",
-        };
-        
-
+                if (id == null)
+                {
+                    // return Redirect("/course/list");
+                    return RedirectToAction("List");
+                }
+        var kurs = Repository.GetById(id);
+     
         return View(kurs);
             }
       public IActionResult List()

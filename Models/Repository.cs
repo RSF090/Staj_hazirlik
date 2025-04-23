@@ -22,5 +22,11 @@ namespace basics.Models
         {
             get { return _courses; }
         }
+
+         public static Course? GetById(int? id)
+    {
+        return _courses.FirstOrDefault(c => c.Id == id);
     }
+    }
+   
 }
